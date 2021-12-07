@@ -1,0 +1,395 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+    <title>Gleblu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+    <div id="topbar" class="hoc clear">
+        <div class="fl_left">
+            <!-- ################################################################################################ -->
+            <ul class="nospace">
+                <li><i class="fas fa-phone rgtspace-5"></i> 231-129-3983</li>
+                <li><i class="far fa-envelope rgtspace-5"></i> veterinaria@gmail.com</li>
+            </ul>
+            <!-- ################################################################################################ -->
+        </div>
+        <div class="fl_right">
+            <!-- ################################################################################################ -->
+            <ul class="nospace">
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="#" title="Help Centre"><i class="far fa-life-ring"></i></a></li>
+                <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+                <li id="searchform">
+                    <div>
+                        <form action="#" method="post">
+                            <fieldset>
+                                <legend>Quick Search:</legend>
+                                <input type="text" placeholder="Enter search term&hellip;">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="container py-3">
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <span class="fs-4">Veterinaria</span>
+        </a>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="btn " href="#">Nutrición especifica</a>
+            <a class="btn " href="#">Sobre nosotros</a>
+            <a class="btn " href="#">Productos</a>
+            <a class="btn " href="#">Donde comprar</a>
+            <a class="btn " href="#">Contacto</a>
+        </nav>
+    </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('{% static "images/demo/backgrounds/01.jpg" %}');">
+<div id="pageintro" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <article>
+        <h3 class="heading">La salud es única para cada mascota</h3>
+        <p>Creamos una nutrición personalizada que ayuda a los animales a vivir de la forma más saludable.</p>
+        <footer>
+            <ul class="nospace inline pushright">
+                <li><a class="btn inverse" href="#">Gatos</a></li>
+                <li><a class="btn inverse" href="#">Perros</a></li>
+            </ul>
+        </footer>
+    </article>
+    <!-- ################################################################################################ -->
+</div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+    <section id="introblocks" class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="wrapper row3">
+            <section class="hoc container clear">
+                <div class="center btmspace-80">
+                    <h6 class="heading underline font-x2">Servicios </h6>
+                </div>
+                <div class="row" style="padding: 20px">
+                    <!-- Renderización de datos de productos -->
+                    {% for servicio in listServicios %}
+
+                    <div class="col-4" align="center">
+                        <div class="card-body bg-light">
+                            <h5>{{ servicio.Name }}</h5>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+
+                            </div>
+                            <p> {{ servicio.Description }}</p>
+                            <button class="btn inverse">Ver mas..</button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+        <!-- ################################################################################################ -->
+    </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+    <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <div class="center btmspace-80">
+            <h6 class="heading underline font-x2"></h6>
+        </div>
+        <ul class="nospace group overview btmspace-80">
+            <li class="one_third">
+                <article>
+                    <div class="clear"><a href="#"><i class="fas fa-leaf"></i></a>
+                        <h6 class="heading">Comprometidos con la calidad y seguridad alimentaria</h6>
+                    </div>
+                    <p>Gracias a nuestros proveedores tenemos productos de calidad, esta atención a los detalles más
+                        pequeños nos ayuda a
+                        proporcionar la nutrición más precisa y efectiva para las mascotas..</p>
+                </article>
+            </li>
+            <img src="{% static 'images/demo/animales10.jpg' %}" class="rounded float-end" alt="">
+        </ul>
+        <footer class="center"><a class="btn inverse" href="#">Semper ullamcorper</a></footer>
+        <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+    </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+    <section class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="center btmspace-80">
+            <h6 class="heading underline font-x2">Adaptados para cada necesidad de salud</h6>
+            <p>La salud individual de cada gato y perro es tan única como lo son ellos. Sin embargo, estas necesidades de salud son, a menudo, características de su tamaño, raza o estilo de vida. Descubre cómo nuestras gamas de nutrición pueden ayudar a cada mascota a disfrutar de la mejor salud posible.</p>
+        </div>
+        <ul class="nospace group">
+            <li class="one_quarter first">
+                <figure class="fixwidth"><a class="imgover btmspace-30" href="#"><img
+                        src="{% static 'images/demo/animales1.jpg' %}"
+                        style="height: 230px; width: 350px; object-fit: cover" alt=""></a>
+                    <figcaption class="bold uppercase center">Contamos con nutrición específica para perros</figcaption>
+                </figure>
+            </li>
+            <li class="one_quarter">
+                <figure class="fixwidth"><a class="imgover btmspace-30" href="#"><img
+                        src="{% static 'images/demo/gatos1.jpg' %}"
+                        style="height: 230px; width: 350px; object-fit: cover" alt=""></a>
+                    <figcaption class="bold uppercase center">Contamos con nutrición específica para gatos</figcaption>
+                </figure>
+            </li>
+            <li class="one_quarter">
+                <figure class="fixwidth"><a class="imgover btmspace-30" href="#"><img
+                        src="{% static 'images/demo/animales9.jpg' %}"
+                        style="height: 230px; width: 350px; object-fit: cover" alt=""></a>
+                    <figcaption class="bold uppercase center">Buenos resultados para tu mascota</figcaption>
+                </figure>
+            </li>
+            <li class="one_quarter">
+                <figure class="fixwidth"><a class="imgover btmspace-30" href="#"><img
+                        src="{% static 'images/demo/gatoperro.jpg' %}"
+                       style="height: 230px; width: 350px; object-fit: cover" alt=""></a>
+                    <figcaption class="bold uppercase center">Comprometidos con la calidad</figcaption>
+                </figure>
+            </li>
+        </ul>
+        <!-- ################################################################################################ -->
+    </section>
+</div>
+
+
+
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('{% static " images/demo/backgrounds/01.png" %}');">
+<section class="hoc container clear">
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-80">
+        <h6 class="heading underline font-x2"></h6>
+    </div>
+    <ul id="testimonials" class="nospace group btmspace-80">
+        <li class="one_half first">
+            <blockquote>Hasta que no hayas amado a un animal, una parte de tu alma permanecerá dormida.
+            </blockquote>
+            <figure class="clear"><img class="circle" src="images/demo/60x60.png" alt="">
+                <figcaption>
+                    <h6 class="heading">Anatole France</h6>
+                    </figcaption>
+            </figure>
+        </li>
+        <li class="one_half">
+            <blockquote>Los animales no son propiedades o cosas, sino organismos vivientes, sujetos de una vida, que merecen nuestra compasión, respeto, amistad y apoyo.
+            </blockquote>
+            <figure class="clear"><img class="circle" src="images/demo/60x60.png" alt="">
+                <figcaption>
+                    <h6 class="heading">Marc Bekoff</h6>
+                  </figcaption>
+            </figure>
+        </li>
+    </ul>
+    <!-- ################################################################################################ -->
+</section>
+</div>
+
+
+
+
+<div class="wrapper row3">
+    <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <div class="center btmspace-80">
+            <h6 class="heading underline font-x2"></h6>
+        </div>
+        <ul class="nospace group overview btmspace-80">
+            <li class="one_third">
+                <article>
+                    <div class="clear"><a href="#"><i class="fas fa-leaf"></i></a>
+                        <h6 class="heading">Dar el mejor cuidado a tu mascota y una buena salud </h6>
+                    </div>
+                    <p>Contamos con personal altamente capacitado para dar los mejores servicios de salud y
+                        estetica a tu mascota, tenemos una gama de productos variada para satisfacer las
+                        necesidades nutricionales para tu mascota.</p>
+                </article>
+            </li>
+            <img src="{% static 'images/demo/animales13.jpg' %}" class="rounded float-end" alt="">
+        </ul>
+        <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+    </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row3">
+
+    <section class="hoc container clear">
+
+        <div class="center btmspace-80">
+            <h6 class="heading underline font-x2">Mascotas </h6>
+        </div>
+        <div class="row" style="padding: 20px">
+            <!-- Renderización de datos de productos -->
+            {% for mascota in listMascota %}
+
+            <div class="col-4" align="center">
+                <div class="card-body bg-light">
+                    <h5>Nombre:{{ mascota.Name }}</h5>
+                    <img src="{{ mascota.Foto }}" style="height: 300px; width: 300px; object-fit: cover" alt="">
+                    <div>
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+
+                    </div>
+                    <h6>Color:{{ mascota.Color }}</h6>
+                    <h6>Especie: {{ mascota.Type }}</h6>
+                    <h6>Edad: {{ mascota.Age }}</h6>
+                    <button class="btn inverse">Ver mas..</button>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+    <footer id="footer" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div class="one_quarter first">
+            <h6 class="heading">Contactos</h6>
+            <ul class="nospace linklist contact btmspace-30">
+                <li><i class="fas fa-map-marker-alt"></i>
+                    <address>
+                        Street Name &amp; Number, Town, Postcode/Zip
+                    </address>
+                </li>
+                <li><i class="fas fa-phone"></i> +52 (231) 456 7890</li>
+                <li><i class="far fa-envelope"></i> veterinaria@gmail.com</li>
+            </ul>
+            <ul class="faico clear">
+                <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="heading">Fundación</h6>
+            <ul class="nospace linklist">
+                <li>
+                    <article>
+                        <p class="nospace btmspace-10"><a href="#">Porta tellus massa consectetuer sem eget pharetra
+                            ligula purus sit amet dui.</a></p>
+                        <time class="block font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <p class="nospace btmspace-10"><a href="#">Commodo ornare maximus donec consectetuer adipiscing
+                            elit pellentesque habitant.</a></p>
+                        <time class="block font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+                    </article>
+                </li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="heading">Non lobortis felis lacus</h6>
+            <ul class="nospace linklist">
+                <li><a href="#">Morbi tristique senectus</a></li>
+                <li><a href="#">Habitasse platea dictumst</a></li>
+                <li><a href="#">Egestas in hac habitasse</a></li>
+                <li><a href="#">Tellus ac convallis pellentesque</a></li>
+                <li><a href="#">Lacus tortor varius erat</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="heading">Platea dictumst fusce</h6>
+            <ul class="nospace clear latestimg">
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+                <li><a class="imgover" href="#"><img src="{% static 'images/demo/animales13.jpg' %}" alt=""></a></li>
+            </ul>
+        </div>
+        <!-- ################################################################################################ -->
+    </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Suheidy Nerina</a></p>
+        <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                                           title="Free Website Templates">OS Templates</a></p>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+</body>
+</html>
